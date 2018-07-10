@@ -1,0 +1,152 @@
+﻿html, body 
+{
+    color: #000;
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-color: #99a6b2;
+}
+
+ul li
+{
+    margin: .5em 0 0;
+}
+
+.header
+{
+    background-color: #273942;
+    border-bottom: 5px solid #31454f;
+    color: #fff;
+    font-family: arial;
+    font-size: 32px;
+    font-stretch: expanded;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.cw_top
+{
+    background-color: #2a4359;
+    height: 420px;
+    margin: 0 auto;
+    width: 900px;
+}
+
+.navbar
+{
+    height: 380px;
+    margin: 0;
+    padding: 20px;
+    width: 134px;
+}
+.navbar a
+{
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a div
+{
+    height: 32px;
+    width: 144px;
+    text-align: center;
+}
+
+.navbar a div:hover
+{
+    background-color: #000;
+}
+
+.imgsection
+{
+    margin: 0;
+    padding: 10;
+    width: 706px;
+}
+
+.content
+{
+    background-color: #E8F1F7;
+    min-height: 100%;
+    padding: 25px;
+    width: 850px;
+}
+.content p
+{
+    margin: 0 0 1em;
+    padding: 0;
+    text-indent: 2em;
+}
+
+.hours li
+{
+    left: -190px;
+    list-style: outside none none;
+    margin: 0 0 0.5em;
+    padding: 0;
+    position: relative;
+    text-align: right;
+}
+.hours iframe
+{
+    float: right;
+    left: -15px;
+    position: relative;
+}
+.dividleft
+{
+    width: 425px;
+}
+.smalltext
+{
+    font-size: 10px;
+}
+
+.sig
+{
+    margin-top: 2em;
+    text-indent: 3em;
+}
+.sig2
+{
+    margin-top: 0.25em;
+    text-indent: 2em;
+}
+
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.clear
+{
+    clear:both;
+}
+.underline
+{
+    text-decoration: underline;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+#printme
+{
+    cursor: pointer;
+    margin-bottom: 20px;
+}
