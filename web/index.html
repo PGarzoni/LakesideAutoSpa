@@ -5,19 +5,41 @@
     <meta charset="utf-8" />
     <title>Lakeside Auto Spa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="Stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/site.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
-    <button id="homeBtn">Home</button>
+    <!--<button id="homeBtn">Home</button>
     <button id="specialsBTn">Specials</button>
     <button id="historyBtn">History</button>
-    <button id="funFactsBtn">Fun Facts</button>
+    <button id="funFactsBtn">Fun Facts</button>-->
+    
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand">Lakeside Auto Spa</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav pointer">
+                        <li class="active"><a id="homeBtn">Home</a></li>
+                        <li><a id="specialsBTn">Specials</a></li>
+                        <li><a id="historyBtn">History</a></li>
+                        <li><a id="funFactsBtn">Fun Facts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     <div id="content">
         <script type="text/javascript">
-            $('#content').load('resources/content.html #Home');
+            $('#content').load('content/home.html');
         </script>
     </div>
 </body>
