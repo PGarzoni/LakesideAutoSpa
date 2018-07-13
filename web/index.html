@@ -4,37 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Lakeside Auto Spa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="css/site.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).on("click", "#homeBtn", NavHome);
-        $(document).on("click", "#specialsBTn", NavSpecials);
-        $(document).on("click", "#historyBtn", NavHistory);
-        $(document).on("click", "#funFactsBtn", NavFunFacts);
-
-        function ClearContent() {
-            $('#content').empty();
-        };
-
-        function NavHome() {
-            ClearContent();
-            $('#content').load('resources/content.html #Home');
-        };
-
-        function NavSpecials() {
-            ClearContent();
-            $('#content').load('resources/content.html #Specials');
-        };
-
-        function NavHistory() {
-            ClearContent();
-            $('#content').load('resources/content.html #History');
-        };
-
-        function NavFunFacts() {
-            ClearContent();
-            $('#content').load('resources/content.html #FunFacts');
-        };
-    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
     <button id="homeBtn">Home</button>
