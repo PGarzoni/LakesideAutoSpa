@@ -1,43 +1,49 @@
-$(window).resize(function () {
-    if ($(window).width() >= 768) {
-        $('nav').removeClass('navbar-static-top').addClass("navbar-fixed-top");
-        $('body').css("padding-top", 50);
-    } else {
+$(document).ready(function () {
+    AdjustHeader();
+    $('#content').load('content/home.html');
+    $(window).resize(function () {
+        AdjustHeader();
+    });
+});
+
+function AdjustHeader() {
+    if ($('#hamburger').css('display') == 'block') {
         $('nav').removeClass('navbar-fixed-top').addClass("navbar-static-top");
         $('body').css({ "padding-top": 0 });
     }
-});
-
+    else {
+        $('nav').removeClass('navbar-static-top').addClass("navbar-fixed-top");
+        $('body').css("padding-top", 50);
+    }
+}
 
 // Home Nav Button
 $(document).on("click", "#homeBtn", function () {
-    ContentLoader('home');
-    $(this).parent().addClass('active');
+    ContentLoader(this, 'home');
 });
 
 // Specials Nav Button
-$(document).on("click", "#specialsBTn", function () {
-    ContentLoader('specials');
-    $(this).parent().addClass('active');
+$(document).on("click", "#specialsBtn", function () {
+    ContentLoader(this, 'specials');
 });
 
 // History Nav Button
 $(document).on("click", "#historyBtn", function () {
-    ContentLoader('history');
-    $(this).parent().addClass('active');
+    ContentLoader(this, 'history');
 });
 
 // Fun Facts Nav Button
 $(document).on("click", "#funFactsBtn", function () {
-    ContentLoader('funfacts');
-    $(this).parent().addClass('active');
+    ContentLoader(this, 'funfacts');
 });
 
 // Loads html content based on value given
-function ContentLoader(val) {
+function ContentLoader(obj, val) {
     $('#navbar li').each(function () {
         $(this).removeClass('active');
     });
+
+    $(obj).parent().addClass('active');
 
     $('#content').empty();
 
@@ -49,16 +55,13 @@ function ContentLoader(val) {
     if (val == 'home') {
         $('#content').load('content/home.html');
     }
-
-    if (val == 'specials') {
+    else if (val == 'specials') {
         $('#content').load('content/specials.html');
     }
-
-    if (val == 'history') {
+    else if (val == 'history') {
         $('#content').load('content/history.html');
     }
-
-    if (val == 'funfacts') {
+    else if (val == 'funfacts') {
         $('#content').load('content/funfacts.html');
     }
 };

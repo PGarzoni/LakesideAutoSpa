@@ -2,8 +2,9 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
     <title>Lakeside Auto Spa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/site.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -25,28 +26,13 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav pointer">
                     <li class="active"><a id="homeBtn">Home</a></li>
-                    <li><a id="specialsBTn">Specials</a></li>
+                    <li><a id="specialsBtn">Specials</a></li>
                     <li><a id="historyBtn">History</a></li>
                     <li><a id="funFactsBtn">Fun Facts</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="content">
-        <script type="text/javascript">
-            $('#content').load('content/home.html');
-        </script>
-    </div>
-    <h1 id="text"></h1>
-
-    <script type="text/javascript">
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        var element = document.getElementById('text');
-        if (isMobile) {
-            element.innerHTML = "You are using Mobile";
-        } else {
-            element.innerHTML = "You are using Desktop";
-        }
-    </script>
+    <div id="content"></div>
 </body>
 </html>
