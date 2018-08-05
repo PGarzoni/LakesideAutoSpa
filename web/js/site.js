@@ -39,19 +39,15 @@ $(document).on("click", "#funFactsBtn", function () {
 
 // Loads html content based on value given
 function ContentLoader(obj, val) {
-    $('#navbar li').each(function () {
-        $(this).removeClass('active');
-    });
+    $('#navbar li.active').removeClass(); //Remove previously active tab
 
-    $(obj).parent().addClass('active');
+    $(obj).parent().addClass('active'); // Set clicked tab to active
 
-    $('#content').empty();
-
-    // Collapse nav menu when it is displayed
     if ($('#hamburger').css('display') == 'block') {
-        $('#navbar').collapse('toggle');
+        $('#navbar').collapse('toggle'); // Whenever hamburger icon is present, click events will collapse the menu
     }
 
+    $('#content').empty(); // Clear content to load desired data
     if (val == 'home') {
         $('#content').load('content/home.html');
     }
