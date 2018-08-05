@@ -39,7 +39,7 @@ $(document).on("click", "#funFactsBtn", function () {
 
 // Loads html content based on value given
 function ContentLoader(obj, val) {
-    $('#navbar li.active').removeClass(); //Remove previously active tab
+    $('#navbar li.active').removeClass(); //Remove the active status from the previously tab
 
     $(obj).parent().addClass('active'); // Set clicked tab to active
 
