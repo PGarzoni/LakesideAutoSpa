@@ -1,6 +1,6 @@
 var cm = ContentManager();
-if (sessionStorage.getItem('tab') == null) {
-    sessionStorage.setItem('tab', 'Home')
+if (sessionStorage.getItem('tab') === null) {
+    sessionStorage.setItem('tab', 'Home');
 }
 
 $(window).on('load', function () {
@@ -14,22 +14,22 @@ $(window).on('beforeunload', function () {
 
 // Home Nav Button
 $(document).on("click", "#homeBtn", function () {
-    cm.contentLoader($(this).text())
+    cm.contentLoader($(this).text());
 });
 
 // Specials Nav Button
 $(document).on("click", "#specialsBtn", function () {
-    cm.contentLoader($(this).text())
+    cm.contentLoader($(this).text());
 });
 
 // History Nav Button
 $(document).on("click", "#historyBtn", function () {
-    cm.contentLoader($(this).text())
+    cm.contentLoader($(this).text());
 });
 
 // Fun Facts Nav Button
 $(document).on("click", "#funFactsBtn", function () {
-    cm.contentLoader($(this).text())
+    cm.contentLoader($(this).text());
 });
 
 function ContentManager() {
@@ -43,15 +43,15 @@ function ContentManager() {
             // Set new tab to active
             var d = this.pageCheck(target);
             $('#navbar li a').each(function () {
-                if ($(this).text().toLowerCase().replace(/\s/g, '') == d) {
+                if ($(this).text().toLowerCase().replace(/\s/g, '') === d) {
                     $(this).parent().addClass('active');
                 }
             });
         },
 
         contentLoader: function (destination) {
-            if ($('#navbar[aria-expanded]').attr('aria-expanded') && $('#hamburger').css('display') == 'block') {
-                $('#navbar').collapse('toggle')
+            if ($('#navbar[aria-expanded]').attr('aria-expanded') && $('#hamburger').css('display') === 'block') {
+                $('#navbar').collapse('toggle');
             }
             this.loadContent(destination);
             this.setActiveTab(destination);
@@ -72,5 +72,5 @@ function ContentManager() {
                     return 'home';
             }
         }
-    }
-};
+    };
+}
